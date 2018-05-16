@@ -114,11 +114,11 @@ void platform_exit(void)
     cpu_halt();
 }
 
-int platform_puts(const char *buf, int n)
+int platform_puts(const char *buf, size_t n)
 {
     int i;
 
-    for (i = 0; i < n; i++)
+    for (i = 0; i < (int)n; i++)
         serial_putc(buf[i]);
 
     return n;

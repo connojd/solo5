@@ -46,11 +46,11 @@ static void flush()
     clear_buffer();
 }
 
-int platform_puts(const char *buf, int n)
+int platform_puts(const char *buf, size_t n)
 {
     int i;
 
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < (int)n; i++) {
         if (buf[i] && buf[i] != 0x0d)
         {
             msg_buffer.data[msg_index] = buf[i];

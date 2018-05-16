@@ -20,7 +20,7 @@
 
 #include "kernel.h"
 
-int platform_puts(const char *buf, int n)
+int platform_puts(const char *buf, size_t n)
 {
     struct ukvm_puts str;
 
